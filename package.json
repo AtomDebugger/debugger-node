@@ -1,0 +1,36 @@
+{
+  "name": "debugger-node",
+  "main": "./lib/index",
+  "author": "AtomDebugger",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "atom": ">=1.9.0 <2.0.0"
+  },
+  "scripts": {
+    "test": "(apm test) && (flow check | grep -q '0 errors') && (eslint . )"
+  },
+  "keywords": [
+    "debugger"
+  ],
+  "description": "Node.js debugging provider for Atom",
+  "dependencies": {
+    "atom-package-deps": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-steelbrain": "^1.0.4",
+    "flow-bin": "^0.31.1",
+    "jasmine-fix": "^1.0.1"
+  },
+  "package-deps": [
+    "debugger"
+  ],
+  "consumedServices": {
+    "debugger": {
+      "versions": {
+        "1.0.0": "consumeDebuggerRegistry"
+      }
+    }
+  }
+}
